@@ -10,58 +10,11 @@ namespace Lab13
     {
         static void Main(string[] args)
         {
-            #region
-            //RegulTreugolnik regulTreugolnik = new RegulTreugolnik();
-            //Treugolnik treugolnik = regulTreugolnik;
-            //if (treugolnik is PrimTreugolnik)
-            //{
-            //    PrimTreugolnik primtreugolnik = (PrimTreugolnik)treugolnik;
-            //}
-
-            ////PrimTreugolnik primtreugolnik = new PrimTreugolnik(1,2);
-            ////Treugolnik treugolnik = primtreugolnik;
-            ////PrimTreugolnik primTreugolnik = (PrimTreugolnik)treugolnik;
-            //Console.WriteLine(treugolnik.GetSquare());
-            #endregion
-            Building building = new Building("Космическа 13",2,3,4);
+            Building building = new Building("Космическая 13", 2, 3, 4);
             Console.WriteLine(building.Print());
+            MultiBuilding multiBuilding = new MultiBuilding("Космическая 13", 2, 3, 4, 5);
+            Console.WriteLine(multiBuilding.Print());
             Console.ReadKey();
         }
     }
-    #region
-    //class Treugolnik
-    //{
-    //    public double A { get; set; }
-    //    public double B { get; set; }
-    //    public double C { get; set; }
-    //    public Treugolnik()
-    //    {
-
-    //    }
-    //    public Treugolnik(double a, double b, double c)
-    //    {
-    //        A = a;
-    //        B = b;
-    //        C = c;
-    //    }
-
-    //    public double GetSquare()
-    //    {
-    //        double p = (A + B + C) / 2;
-    //        return Math.Sqrt(p * (p - A) * (p - B) * (p - C));
-    //    }
-    //}
-    //class PrimTreugolnik : Treugolnik
-    //{
-    //    public PrimTreugolnik(double a, double b)
-    //        : base(a, b, Math.Sqrt(a * a + b * b))
-    //    {
-
-    //    }
-    //}
-    //class RegulTreugolnik : Treugolnik
-    //{
-
-    //}
-    #endregion
 }

@@ -12,10 +12,6 @@ namespace Lab13
         public double Length { get; set; }
         public double Width { get; set; }
         public double Height { get; set; }
-        public Building()
-        {
-
-        }
         public Building(string a, double l, double w, double h)
         {
             Address = a;
@@ -25,16 +21,22 @@ namespace Lab13
         }
         public string Print()
         {
-            MultiBuilding multiBuilding = new MultiBuilding("Космическа 13", 2, 3, 4, 5);
-            return ($"{Address}\n{Length}\n{Width}\n{Height}\n{multiBuilding.Floor}");
+            return $"адресс - {Address}\nдлина - {Length}\nширина - {Width}\nвысота - {Height}";
         }
     }
     sealed class MultiBuilding : Building
     {
         public int Floor { get; set; }// добавляет параметр этажности
-        public MultiBuilding(string a, double l, double w, double h, int f)
+        public MultiBuilding(string a, double l, double w, double h, byte f)
+            : base(a, l, w, h)
         {
             Floor = f;
+        }
+        public string Print()
+        {
+            string itog = base.Print();
+            itog += $"\nколичесвто этажей - {Floor}";
+            return itog;
         }
     }
 }
